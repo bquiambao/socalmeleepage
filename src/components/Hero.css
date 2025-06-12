@@ -1,0 +1,217 @@
+.hero-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-container {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    position: absolute;
+    top: 10px;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-shadow:
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px  2px 0 black,
+        2px  2px 0 black,
+        -2px  0px 0 black,
+        2px  0px 0 black,
+        0px -2px 0 black,
+        0px  2px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+}
+
+.button-social-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.get-started-button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    white-space: nowrap;
+    min-width: fit-content;
+    border: 5px solid black;
+    padding: 8px 25px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    transition: all 0.7s ease-in-out;
+    z-index: 10;
+    text-shadow:
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px  2px 0 black,
+        2px  2px 0 black,
+        -2px  0px 0 black,
+        2px  0px 0 black,
+        0px -2px 0 black,
+        0px  2px 0 black,
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+}
+
+.get-started-button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.get-started-button.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.get-started-button.fade-out {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.social-menu-container {
+    position: absolute;
+    transition: all 0.7s ease-in-out;
+    transition-delay: 0.3s;
+    z-index: 5;
+}
+
+.social-menu-container.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.social-menu-container.fade-out {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    pointer-events: none;
+}
+
+/* Social menu styling - SINGLE DEFINITION */
+.social-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 8px 20px;
+    border: 3px solid white;
+    background-color: black;
+}
+
+/* Individual social link animations */
+.social-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: socialBounce 0.6s ease-in-out;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.social-link:nth-child(1) { animation-delay: 0.1s; }
+.social-link:nth-child(2) { animation-delay: 0.2s; }
+.social-link:nth-child(3) { animation-delay: 0.3s; }
+
+.social-link:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* Bounce animation for social icons */
+@keyframes socialBounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+        transform: translate3d(0,-15px,0);
+    }
+    70% {
+        transform: translate3d(0,-7px,0);
+    }
+    90% {
+        transform: translate3d(0,-2px,0);
+    }
+}
+
+/* Social logo styling */
+.social-logo {
+    font-size: 50px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Delayed text message styling */
+.delayed-text-container {
+    position: absolute;
+    top: 50px; /* Position below the social menu */
+    width: 200px;
+    transition: all 0.7s ease-in-out;
+    transition-delay: 1s; /* Longer delay so it appears after social menu */
+    z-index: 5;
+}
+
+.delayed-text-container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.delayed-text-container.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.delayed-text {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.delayed-text:hover {
+    border-color: #fff;
+    transform: scale(1.05);
+}
+
+.photo-credit {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
