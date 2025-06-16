@@ -22,7 +22,7 @@
     font-size: 100px;
     position: absolute;
     top: 10px;
-    align-self: center;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', sans-serif;
     text-shadow:
         -2px -2px 0 black,
@@ -168,10 +168,18 @@
     transition: all 0.3s ease;
 }
 
+.start-gg-logo {
+    filter: grayscale(100%) contrast(200%) brightness(150%);
+    padding-top: 5px;
+    width: 68px;
+    height: 68px;
+    transition: all 0.3s ease;
+}
+
 /* Delayed text message styling */
 .delayed-text-container {
     position: absolute;
-    top: 50px; /* Position below the social menu */
+    top: 60px; /* Position below the social menu */
     width: 200px;
     transition: all 0.7s ease-in-out;
     transition-delay: 1s; /* Longer delay so it appears after social menu */

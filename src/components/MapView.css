@@ -1,0 +1,15 @@
+.map-event-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.map-event-logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-event-info-section {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: medium;
+}

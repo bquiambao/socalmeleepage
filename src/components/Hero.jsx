@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import './Hero.css'
 
-function Hero() {
+function Hero({ scrollToRegional }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -22,7 +22,7 @@ function Hero() {
             {/* Social Menu */}
             <div className={`social-menu-container ${menuOpen ? 'fade-in' : 'fade-out'}`}>
                 <div className="social-menu">
-                    <a href="https://discord.com/invite/5A9z8feZDW" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://discord.gg/5A9z8feZDW" target="_blank" rel="noopener noreferrer" className="social-link">
                         <i className="fa-brands fa-discord social-logo"></i>
                     </a>
                     <a href="https://x.com/socalmelee" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -31,6 +31,9 @@ function Hero() {
                     <a href="https://www.facebook.com/groups/SSBMsocal" target="_blank" rel="noopener noreferrer" className="social-link">
                         <i className="fa-brands fa-facebook social-logo"></i>
                     </a>
+                    <a href="https://www.start.gg/hub/socal-melee-community" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <img src="/images/startgglogo.png" className="start-gg-logo"/>
+                    </a>
                 </div>
             </div>
 
@@ -38,10 +41,7 @@ function Hero() {
             <div className={`delayed-text-container ${menuOpen ? 'fade-in' : 'fade-out'}`}>
                 <p 
                     className="delayed-text" 
-                    onClick={() => {
-                        // TODO: Navigate to your component when you create it
-                        console.log('Navigate to component');
-                    }}
+                    onClick={scrollToRegional}
                 >
                     Looking for your local community?
                 </p>

@@ -1,0 +1,49 @@
+.regional-info {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.swiper {
+  height: 40vh;
+  background-color: white;
+  max-width: 40vw;
+}
+
+.swiper-slide {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.regional-info-container {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.regional-info-container h2 {
+    color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    padding-bottom: 30px;
+}
+
+.regional-info-links {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.regional-info-links li{
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.regional-info-item {
+  text-decoration: none;
+  color: black;
+}

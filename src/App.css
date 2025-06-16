@@ -11,3 +11,24 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+.block-layout {
+  display: flex;
+}
+
+.block-section {
+  width: 50vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;   
+}
+
+@media (max-width: 768px) {
+  .square-section {
+    width: 100vw;
+  }
+}

@@ -1,13 +1,13 @@
-import React from 'react';
+import {React, useContext} from 'react';
 import '../../App.css';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
-
-const res = await fetch('/.netlify/functions/tournamentsNearby')
-const eventData = await res.json();
-console.log(eventData);
+import { UpcomingTournamentDataContext } from '../../context/UpcomingTournamentDataContext';
 
 function Events(){
+    const tournaments = useContext(UpcomingTournamentDataContext);
+    console.log(tournaments);
+
     return (
         <div className="calendar-wrapper">
             <h1> Socal Melee Event Calendar </h1>
@@ -15,7 +15,7 @@ function Events(){
                 plugins={[dayGridPlugin]}
                 initialView="dayGridMonth"
                 headerToolbar={false}
-                events={eventData}
+                events={tournaments}
                 eventContent={renderEventContent}
                 eventClick={handleEventClick}
             />

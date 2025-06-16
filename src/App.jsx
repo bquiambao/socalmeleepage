@@ -6,18 +6,22 @@ import Home from './components/pages/Home';
 import Events from './components/pages/Events';
 import About from './components/pages/About';
 import Archive from './components/pages/Archive';
+import { UpcomingTournamentDataProvider } from './context/UpcomingTournamentDataContext';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/events' element={<Events/>} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/archive' element={<Archive/>} />
-      </Routes>
-    </Router>
+    <UpcomingTournamentDataProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/events' element={<Events/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/archive' element={<Archive/>} />
+        </Routes>
+      </Router>
+    </UpcomingTournamentDataProvider>
   );
 }
 
