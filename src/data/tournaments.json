@@ -1,0 +1,88 @@
+[
+    {
+        "name": "McCloud's Melee Co.",
+        "address": "14741 Calvert St, Van Nuys, CA 91411, USA",
+        "region": "Los Angeles",
+        "frequency": "Weekly",
+        "day": "Monday",
+        "doorsOpen": "6:00 PM",
+        "startTime": "7:00 PM",
+        "lat": 34.181979, 
+        "lng": -118.4571715,
+        "logo": "mcclouds.webp"
+    },
+    {
+        "name": "Midnight Melee",
+        "address": "1101 San Fernando Rd, San Fernando, CA 91340, USA",
+        "region": "Los Angeles",
+        "frequency": "Weekly",
+        "day": "Tuesday",
+        "doorsOpen": "6:30 PM",
+        "startTime": "7:20 PM",
+        "lat": 34.2861871, 
+        "lng": -118.4427001,
+        "logo": "midnightmelee.webp"
+    },
+    {
+        "name": "Rage Against the CRT",
+        "address": "9500 Gilman Drive, 0323-F Old Student Center, La Jolla, CA 92037, USA",
+        "region": "San Diego",
+        "frequency": "Weekly",
+        "day": "Thursday",
+        "doorsOpen": "6:00 PM",
+        "startTime": "7:00 PM",
+        "lat": 32.8771313, 
+        "lng": -117.2398745,
+        "logo": "ratc.webp"
+    },
+    {
+        "name": "Melee Friends Activate!",
+        "address": "123 N Cypress St, Orange, CA 92866, USA",
+        "region": "Orange County",
+        "frequency": "Weekly",
+        "day": "Thursday",
+        "doorsOpen": "6:00 PM",
+        "startTime": "7:00 PM",
+        "lat": 33.7884301, 
+        "lng": -117.8584862,
+        "logo": "mfa.jpg"
+    },
+    {
+        "name": "Lab Monster",
+        "address": "123 N Cypress St, Orange, CA 92866, USA",
+        "region": "Los Angeles",
+        "frequency": "Weekly",
+        "day": "Saturday",
+        "doorsOpen": "2:00 PM",
+        "startTime": "3:00 PM",
+        "lat": 33.804066, 
+        "lng": -118.2014145,
+        "logo": "labmonster.jpg"
+    },
+    {
+        "name": "Deyve's Smash Bash",
+        "address": "654 Gibbons St, Los Angeles, CA 90031, USA",
+        "region": "Los Angeles",
+        "frequency": "Monthly",
+        "day": "Sunday",
+        "doorsOpen": "2:00 PM",
+        "startTime": "3:00 PM",
+        "lat": 34.0659181, 
+        "lng": -118.2265152,
+        "logo": "deyves.webp",
+        "note": "Usually happens the last Sunday of the month."
+    },
+    {
+        "name": "Mission Complete",
+        "address": "3869 Miramar St, La Jolla, CA 92037, USA",
+        "region": "San Diego",
+        "frequency": "Monthly",
+        "day": "Saturday",
+        "doorsOpen": "5:30 PM",
+        "startTime": "6:30 PM",
+        "lat": 32.8754167, 
+        "lng": -117.2250749,
+        "logo": "missioncomplete.webp",
+        "note": "Usually happens the first Saturday of the month."
+    }
+]

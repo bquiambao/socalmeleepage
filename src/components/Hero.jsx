@@ -1,5 +1,6 @@
-import {React, useState} from 'react';
+import {React, useState, useContext} from 'react';
 import './Hero.css'
+import LastNightTop3 from './LastNightTop3';
 
 function Hero({ scrollToRegional }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -48,6 +49,8 @@ function Hero({ scrollToRegional }) {
             </div>
 
         </div>
+
+        <LastNightTop3/>
         
         <p className='photo-credit'>Credit: @Jeff_in_3D / jeffin3d.pixieset.com</p>
       </div>

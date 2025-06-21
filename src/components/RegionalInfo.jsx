@@ -12,12 +12,13 @@ function RegionalInfo(){
         <div className="block-section">
             <h1 className="regional-info">Regional Info</h1>
             <Swiper
+                className="regional-swiper"
                 modules={[Pagination, Navigation]}
                 pagination={{ clickable: true }}
                 navigation={true}
                 slidesPerView={1}
             >
-                <SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
                     <div className="regional-info-container">
                         <h2>Los Angeles</h2>
                         <ul className='regional-info-links'>
@@ -39,7 +40,7 @@ function RegionalInfo(){
                         </ul>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
                     <div className="regional-info-container">
                         <h2>San Diego</h2>
                         <ul className='regional-info-links'>
@@ -66,7 +67,7 @@ function RegionalInfo(){
                         </ul>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
                     <div className="regional-info-container">
                         <h2>Orange County</h2>
                         <ul className='regional-info-links'>

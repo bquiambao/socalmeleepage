@@ -1,3 +1,28 @@
+.map-header {
+    display: flex;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.event-map-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-map-container {
+    width: 40vw;
+    padding-bottom: 10px;
+}
+
+.tournament-list{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .map-event-logo {
     width: 100px;
     height: 100px;
@@ -40,4 +65,20 @@
 .leaflet-control-container {
     z-index: 998;
     position: relative;
+}
+
+.event-filters {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:0;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.filter-container {
+    padding: 5px;
 }
