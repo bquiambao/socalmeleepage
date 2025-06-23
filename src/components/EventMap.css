@@ -104,4 +104,8 @@
         flex-direction: column;
         padding-bottom: 20px;
     }
+    
+    .tournament-map-popup {
+        max-width: 75vw;
+    }
 }

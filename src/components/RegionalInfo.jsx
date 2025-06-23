@@ -17,6 +17,7 @@ function RegionalInfo(){
                 pagination={{ clickable: true }}
                 navigation={true}
                 slidesPerView={1}
+                allowTouchMove={false}
             >
                 <SwiperSlide className="regional-swiper-slide">
                     <div className="regional-info-container">

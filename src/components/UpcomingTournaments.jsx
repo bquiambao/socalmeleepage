@@ -13,7 +13,7 @@ function UpcomingTournaments(){
 
     return(
         <div className="block-section">
-            <h1 className="upcoming-tournaments-header">Upcoming Tournaments</h1>\
+            <h1 className="upcoming-tournaments-header">Upcoming Tournaments</h1>
             <MapView tournaments={tournaments}/>
         </div>
     )

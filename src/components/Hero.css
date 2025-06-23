@@ -56,7 +56,7 @@
     position: absolute;
     white-space: nowrap;
     min-width: fit-content;
-    border: 5px solid black;
+    border: 5px solid white;
     padding: 8px 25px;
     font-family: 'Franklin Gothic Medium', sans-serif;
     transition: all 0.7s ease-in-out;
@@ -79,6 +79,7 @@
 .get-started-button:hover {
     transition: all 0.3s ease-out;
     background: #fff;
+    border: 5px solid black;
     color: #242424;
     cursor: pointer;
     text-shadow: none;

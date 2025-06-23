@@ -6,15 +6,16 @@ import tournamentData from '../data/tournaments.json';
 import {AnimatePresence, motion} from 'framer-motion';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
+    iconRetinaUrl: markerIcon2x,
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
 });
 
 function EventMap({dataType}) {
@@ -22,6 +23,8 @@ function EventMap({dataType}) {
     const [selectedRegions, setSelectedRegions] = useState([]);
     const [selectedFrequencies, setSelectedFrequencies] = useState([]);
     const center = [33.6455, -117.8677];
+    const swBounds = [30.5, -126];
+    const neBounds = [38, -112];
 
     const markersRef = useRef({});
 
@@ -53,14 +56,20 @@ function EventMap({dataType}) {
                     </div>
                     <div className="event-map-wrapper">
                         <div className='event-map-container'>
-                            <MapContainer center={center} zoom={8} style={{ height: '500px', width: '100%' }}>
+                            <MapContainer 
+                                center={center} 
+                                zoom={8}
+                                maxBounds={[swBounds, neBounds]} 
+                                maxBoundsViscosity={1.0} 
+                                style={{ height: '500px', width: '100%' }}
+                            >
                                 <TileLayer
                                     attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                 />
                                 {tournaments.map(t => (
                                     <Marker key={t.id} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
-                                        <Popup>
+                                        <Popup className="tournament-map-popup">
                                             <div className="map-event-logo-section">
                                                 <img src={t.images[0].url} className="map-event-logo"></img><br/>
                                             </div>
@@ -186,7 +195,13 @@ function EventMap({dataType}) {
                     </div>
                     <div className="event-map-wrapper">
                         <div className='event-map-container'>
-                            <MapContainer center={center} zoom={8} style={{ height: '500px', width: '100%' }}>
+                            <MapContainer 
+                                center={center} 
+                                zoom={8}  
+                                maxBounds={[swBounds, neBounds]} 
+                                maxBoundsViscosity={1.0} 
+                                style={{ height: '500px', width: '100%' }}
+                            >
                                 <TileLayer
                                     attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -196,7 +211,7 @@ function EventMap({dataType}) {
                                         (selectedFrequencies.length === 0 || selectedFrequencies.includes(t.frequency))).
                                 map(t => (
                                     <Marker key={t.name} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
-                                        <Popup>
+                                        <Popup className="tournament-map-popup">
                                             <div className="map-event-logo-section">
                                                 <img src={`/images/tournamentlogos/${t.logo}`} className="map-event-logo"></img><br/>
                                             </div>

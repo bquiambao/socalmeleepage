@@ -24,6 +24,11 @@ function About(){
                 <div className="about-section-text">
                     Southern California is both an iconic landmark and a current 
                     hotspot for the competitive Super Smash Bros. Melee scene.
+                    It is home to one of the most passionate communities in the greater
+                    scene. There are tournaments every week, ranging from Los Angeles 
+                    to San Diego, where anyone can enter, play outside of tournament, or
+                    even just spectate! You can even grab a drink and just enjoy the Melee with
+                    some friends at some of our featured tournaments!         
                 </div>
             </div> 
         </motion.div>

@@ -23,6 +23,8 @@ function LastNightTop3() {
 
         tournament.events.forEach(event => {
             const eventName = event.name;
+            const phaseGroups = event.phaseGroups;
+            const tournamentUrl = phaseGroups[phaseGroups.length - 1].bracketUrl;
             const top3 = event.standings.nodes
             .map(s => ({
                 placement: s.placement,
@@ -33,6 +35,7 @@ function LastNightTop3() {
                 data.push({
                     tournament: tournamentName,
                     eventName: eventName,
+                    url: tournamentUrl,
                     top3
                 });
             }
@@ -46,13 +49,15 @@ function LastNightTop3() {
             pagination={{ clickable: true }}
             navigation={true}
             slidesPerView={1}
+            allowTouchMove={false}
         >
             {data.map((d, idx) => (
                 <SwiperSlide className="top-3-swiper-slide" key={idx}>
                     <h2> Congrats to the Top 3 of {d.eventName} at {d.tournament} last night!</h2> <br/>
                     🥇{d.top3[0].player} <br/>
                     🥈{d.top3[1].player} <br/>
-                    🥉{d.top3[2].player}
+                    🥉{d.top3[2].player} <br/><br/>
+                    <a href={`${d.url}`} target="_blank" rel="noopener noreferrer">Bracket here!</a>
                 </SwiperSlide>
             ))}
         </Swiper>

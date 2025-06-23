@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import {motion} from 'framer-motion';
+import ImageGalleries from '../ImageGalleries';
 
 function Archive(){
     return (
@@ -15,7 +16,7 @@ function Archive(){
             }}
         >
             <div className='archive-section'>
-                <h1>More content coming soon!</h1>
+                <ImageGalleries/>
             </div>
         </motion.div>
     )
