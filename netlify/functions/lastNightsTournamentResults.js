@@ -1,13 +1,12 @@
 import { fetchStartGG } from '../utils/fetchStartGG.js';
+import { DateTime } from 'luxon';
 
 const meleeID = 1;
 const socalCenterCoordinates = "33.7454725,-117.86765300000002";
 const californiaAddrStateCode = "CA";
-const now = new Date();
-const yesterday = new Date(now);
-yesterday.setDate(yesterday.getDate() - 1);
-yesterday.setHours(0, 0, 0, 0);
-const yesterdayTimestamp = yesterday.getTime()/1000;
+const zone = 'America/Los_Angeles';
+const yesterday = DateTime.now().setZone(zone).minus({ days: 1 }).startOf('day');
+const yesterdayTimestamp = Math.floor(yesterday.toSeconds());
 
 export async function handler(event, context) {
 
