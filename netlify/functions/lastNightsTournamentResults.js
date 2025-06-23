@@ -40,6 +40,7 @@ export async function handler(event, context) {
                     id
                     name
                     events(filter: {videogameId: $ids}) {
+                        name
                         standings(query: {page: $page, perPage: $perPage}) {
                             nodes {
                                 placement

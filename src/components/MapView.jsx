@@ -23,7 +23,7 @@ function MapView({tournaments}) {
             />
             {tournaments.map(t => (
                 <Marker key={t.id} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
-                    <Popup>
+                    <Popup className="tournament-map-popup">
                         <div className="map-event-logo-section">
                             <img src={t.images[0].url} className="map-event-logo"></img><br/>
                         </div>

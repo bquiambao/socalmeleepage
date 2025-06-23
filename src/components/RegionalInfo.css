@@ -17,6 +17,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     font-size: 1.5rem;
     color: black;
 }
@@ -40,11 +41,9 @@
 
 .regional-info-links li{
     padding-bottom: 20px;
-    text-align: left;
     display: inline-block;
     position: relative;
 }
-
 
 .regional-info-item {
     text-decoration: none;
@@ -56,14 +55,22 @@
 }
 
 @media (max-width: 768px) {
-    .swiper {
+
+    .regional-info-container {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        height: 50vh;
+    }
+
+    .regional-swiper {
         min-width: 90vw;
+        height: 50vh;
         background-color: white;
+        overflow: hidden;
     }
     
     .regional-info-links {
-        padding-left: 100px;
-        padding-right: 100px;
-        font-size: 10px;
+        font-size: 1rem;
     }
+
 }

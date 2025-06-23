@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import {React} from 'react';
 import Navbar  from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
@@ -12,31 +12,6 @@ import 'leaflet/dist/leaflet.css';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const checkScreenSize = () => {
-        setIsMobile(window.innerWidth <= 768);
-      };
-
-      checkScreenSize();
-      window.addEventListener('resize', checkScreenSize);
-
-      return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
-    if (isMobile) {
-      return (
-        <div className="mobile-blocker">
-          <div className="mobile-background"></div>
-          <div className="message">
-            <h1>🚧 Mobile Version in Progress</h1>
-            <p>Please visit this site on a desktop for the best experience.</p>
-          </div>
-        </div>
-      );
-    }
 
     return (
       <UpcomingTournamentDataProvider>

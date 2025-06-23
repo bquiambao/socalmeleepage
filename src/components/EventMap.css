@@ -82,3 +82,26 @@
 .filter-container {
     padding: 5px;
 }
+
+@media (max-width: 768px) {
+
+    .event-map-container {
+        width: 90vw;
+        padding-bottom: 10px;
+    }
+
+    .event-map-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map-header {
+        display: flex;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        text-align: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}

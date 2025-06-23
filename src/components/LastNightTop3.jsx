@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 
 function LastNightTop3() {
 
+    const validEvents =  ["Melee Singles", "Melee Doubles"];
     const {results} = useContext(LastNightsTournamentResultsContext);
 
     if (!results) {
@@ -21,16 +22,20 @@ function LastNightTop3() {
         const tournamentName = tournament.name;
 
         tournament.events.forEach(event => {
+            const eventName = event.name;
             const top3 = event.standings.nodes
             .map(s => ({
                 placement: s.placement,
                 player: s.entrant.name
             }));
 
-            data.push({
-                tournament: tournamentName,
-                top3
-            });
+            if (top3.length == 3 && validEvents.includes(eventName)) {
+                data.push({
+                    tournament: tournamentName,
+                    eventName: eventName,
+                    top3
+                });
+            }
         });
     });
 
@@ -44,7 +49,7 @@ function LastNightTop3() {
         >
             {data.map((d, idx) => (
                 <SwiperSlide className="top-3-swiper-slide" key={idx}>
-                    <h2> Congrats to the Top 3 of {d.tournament} last night!</h2> <br/>
+                    <h2> Congrats to the Top 3 of {d.eventName} at {d.tournament} last night!</h2> <br/>
                     🥇{d.top3[0].player} <br/>
                     🥈{d.top3[1].player} <br/>
                     🥉{d.top3[2].player}

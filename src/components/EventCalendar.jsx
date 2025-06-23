@@ -49,7 +49,15 @@ function EventCalendar({dataType}) {
                 tournamentUrl: extendedProps.tournamentUrl,
                 stream: extendedProps.stream
             });
-            setPopoverPosition({ top: pageY, left: pageX });
+            if (window.innerWidth < 768) {
+                setPopoverPosition({
+                    top: pageY,
+                    left: 10
+                });
+            }
+            else {
+                setPopoverPosition({ top: pageY, left: pageX });
+            }
         }
 
         return (
@@ -62,24 +70,28 @@ function EventCalendar({dataType}) {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
                     <div className="calendar-wrapper">
-                            <h1> SoCal Melee Event Calendar </h1>
-                            <h2> This is a calendar of upcoming events with published start.gg pages in SoCal.</h2>
-                            <FullCalendar
-                                plugins={[dayGridPlugin]}
-                                initialView="multiWeek"
-                                views={{
-                                    multiWeek: {
-                                        type: "dayGrid",
-                                        duration: { weeks: 5 }
-                                    }
-                                }}
-                                contentHeight="auto"
-                                initialDate={new Date()}
-                                headerToolbar={false}
-                                events={calendarEvents}
-                                eventContent={renderEventContent}
-                                eventClick={handleEventClick}
-                            />
+                            <div className="calendar-header">
+                                <h1> SoCal Melee Event Calendar </h1>
+                                <h2> This is a calendar of upcoming events with published start.gg pages in SoCal.</h2>
+                            </div>
+                            <div className="calendar-scroll-container">
+                                <FullCalendar
+                                    plugins={[dayGridPlugin]}
+                                    initialView="multiWeek"
+                                    views={{
+                                        multiWeek: {
+                                            type: "dayGrid",
+                                            duration: { weeks: 5 }
+                                        }
+                                    }}
+                                    contentHeight="auto"
+                                    initialDate={new Date()}
+                                    headerToolbar={false}
+                                    events={calendarEvents}
+                                    eventContent={renderEventContent}
+                                    eventClick={handleEventClick}
+                                />
+                            </div>
                             {selectedEvent && (
                                 <div
                                     className="popover"
@@ -179,7 +191,15 @@ function EventCalendar({dataType}) {
                 region: extendedProps.region,
                 frequency: extendedProps.frequency,
             });
-            setPopoverPosition({ top: pageY, left: pageX });
+            if (window.innerWidth < 768) {
+                setPopoverPosition({
+                    top: pageY,
+                    left: 10
+                });
+            }
+            else {
+                setPopoverPosition({ top: pageY, left: pageX });
+            }
         }
 
         function handleNonCalendarEventClick(event, t) {
@@ -203,9 +223,11 @@ function EventCalendar({dataType}) {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
                     <div className="general-calendar-wrapper">
-                        <h1> SoCal Melee Event Calendar </h1>
-                        <h2> This is a calendar of known events in SoCal. Contact cliché if you would like your event to show up here!</h2>
-                        <h3> Disclaimer: This calendar doesn't guarantee that these events are happening on these dates. Please consult the appropriate regional discords or the Upcoming calendar to verify if an event is happening. </h3>
+                        <div className="calendar-header">
+                            <h1> SoCal Melee Event Calendar </h1>
+                            <h2> This is a calendar of known events in SoCal. Contact cliché if you would like your event to show up here!</h2>
+                            <h3> Disclaimer: This calendar doesn't guarantee that these events are happening on these dates. Please consult the appropriate regional discords or the Upcoming calendar to verify if an event is happening. </h3>
+                        </div>
                         <div className="event-filters">
                             Filter by Region:
                             <div className="filter-options">
@@ -239,35 +261,37 @@ function EventCalendar({dataType}) {
                             </div>
                         </div>
                         <div className='calendar-and-recurring-monthlies'>
-                            <FullCalendar
-                                plugins={[dayGridPlugin]}
-                                initialView="multiWeek"
-                                views={{
-                                    multiWeek: {
-                                        type: "dayGrid",
-                                        duration: { weeks: 5 }
-                                    }
-                                }}
-                                contentHeight="auto"
-                                initialDate={new Date()}
-                                headerToolbar={false}
-                                key={selectedRegions.join(",")}
-                                events={calendarEvents}
-                                eventContent={renderEventContent}
-                                eventClick={handleEventClick}
-                                eventDidMount={(info) => {
-                                    const { region, frequency } = info.event.extendedProps;
+                            <div className="calendar-scroll-container">
+                                <FullCalendar
+                                    plugins={[dayGridPlugin]}
+                                    initialView="multiWeek"
+                                    views={{
+                                        multiWeek: {
+                                            type: "dayGrid",
+                                            duration: { weeks: 5 }
+                                        }
+                                    }}
+                                    contentHeight="auto"
+                                    initialDate={new Date()}
+                                    headerToolbar={false}
+                                    key={selectedRegions.join(",")}
+                                    events={calendarEvents}
+                                    eventContent={renderEventContent}
+                                    eventClick={handleEventClick}
+                                    eventDidMount={(info) => {
+                                        const { region, frequency } = info.event.extendedProps;
 
-                                    const regionMatch =
-                                        selectedRegions.length === 0 || selectedRegions.includes(region);
+                                        const regionMatch =
+                                            selectedRegions.length === 0 || selectedRegions.includes(region);
 
-                                    if (regionMatch) {
-                                        info.el.style.setProperty('display', 'block', 'important');
-                                    } else {
-                                        info.el.style.setProperty('display', 'none', 'important');
-                                    }
-                                }}
-                            />
+                                        if (regionMatch) {
+                                            info.el.style.setProperty('display', 'block', 'important');
+                                        } else {
+                                            info.el.style.setProperty('display', 'none', 'important');
+                                        }
+                                    }}
+                                />
+                            </div>
                             <div className="recurring-monthlies">
                                 <h2>Recurring Monthlies</h2>
                                 <h3>These tournaments happen monthly but can vary on the exact scheduled day.</h3>
