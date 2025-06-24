@@ -84,5 +84,18 @@
         "lng": -117.2250749,
         "logo": "missioncomplete.webp",
         "note": "Usually happens the first Saturday of the month."
+    },
+    {
+        "name": "Smash T Hill",
+        "address": "244 Thousand Oaks Blvd, Thousand Oaks, CA 91360, USA",
+        "region": "805",
+        "frequency": "Monthly",
+        "day": "Monday",
+        "doorsOpen": "5:45 PM",
+        "startTime": "6:45 PM",
+        "lat": 34.1789097, 
+        "lng": -118.8756812,
+        "logo": "smashthill.webp",
+        "note": "Happens on Mondays."
     }
 ]

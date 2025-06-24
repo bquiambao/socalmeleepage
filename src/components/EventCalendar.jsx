@@ -258,6 +258,15 @@ function EventCalendar({dataType}) {
                                     />
                                     Orange County
                                 </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        value="805"
+                                        checked={selectedRegions.includes("805")}
+                                        onChange={() => handleRegionChange("805")}
+                                    />
+                                    805
+                                </label>
                             </div>
                         </div>
                         <div className='calendar-and-recurring-monthlies'>

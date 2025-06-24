@@ -85,6 +85,23 @@ function RegionalInfo(){
                         </ul>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
+                    <div className="regional-info-container">
+                        <h2>805 Area</h2>
+                        <ul className='regional-info-links'>
+                            <li> 
+                                <a href="https://discord.gg/ucms2u2QaU" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                    <i className="fa-brands fa-discord"></i> Santa Barbara Melee Discord
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://discord.gg/gkGwa7thHK" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                    <i className="fa-brands fa-discord"></i> Ventura County Smash Discord
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
     );
