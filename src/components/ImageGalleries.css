@@ -53,8 +53,8 @@
 
 .grid-thumb {
     width: 100%;
-    max-width: 250px;  
-    height: auto;
+    max-width: 250px;
+    height: 300px;
     object-fit: cover;
     cursor: pointer;
     border-radius: 6px;
