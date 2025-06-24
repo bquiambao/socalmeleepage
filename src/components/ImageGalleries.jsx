@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "./ImageGalleries.css";
+import {AnimatePresence, motion} from 'framer-motion';
 
 const galleries = {
     rankings: {
@@ -77,6 +78,7 @@ function ImageGalleries() {
     const openGallery = galleries[selectedGallery]?.images || [];
 
     return (
+        
         <div className="gallery-container">
             {!selectedGallery ? (
                 <div className="thumbnail-row">
@@ -96,28 +98,41 @@ function ImageGalleries() {
                 ))}
                 </div>
             ) : (
-                <div className="back-button-and-gallery">
-                <button className="back-button" onClick={() => setSelectedGallery(null)}>
-                    ← Back
-                </button>
-                <div className="image-grid">
-                    {openGallery.map((img, index) => (
-                        <div className="grid-image-wrapper">
-                            <img
-                                key={index}
-                                src={img.src}
-                                alt={`Gallery Image ${index + 1}`}
-                                className="grid-thumb"
-                                onClick={() => setLightboxIndex(index)}
-                            />
-                            <div className="grid-image-text-section">
-                                {img.caption && <p>{img.caption}</p>}
-                                {img.credit && <p>Credit: {img.credit}</p>}
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        initial={{ opacity: 0}}
+                        animate={{ opacity: 1}}
+                        transition={{
+                            type: "tween",
+                            duration: 0.5,
+                            ease: "easeInOut", 
+                            delay: 0.3
+                        }}
+                    >
+                        <div className="back-button-and-gallery">
+                            <button className="back-button" onClick={() => setSelectedGallery(null)}>
+                                ← Back
+                            </button>
+                            <div className="image-grid">
+                                {openGallery.map((img, index) => (
+                                    <div className="grid-image-wrapper">
+                                        <img
+                                            key={index}
+                                            src={img.src}
+                                            alt={`Gallery Image ${index + 1}`}
+                                            className="grid-thumb"
+                                            onClick={() => setLightboxIndex(index)}
+                                        />
+                                        <div className="grid-image-text-section">
+                                            {img.caption && <p>{img.caption}</p>}
+                                            {img.credit && <p>Credit: {img.credit}</p>}
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    ))}
-                </div>
-                </div>
+                    </motion.div>
+                </AnimatePresence>
             )}
 
             <Lightbox
@@ -127,6 +142,7 @@ function ImageGalleries() {
                 slides={openGallery}
             />
         </div>
+
     );
 }
 
