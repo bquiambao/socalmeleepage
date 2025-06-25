@@ -119,6 +119,18 @@ function RegionalInfo(){
                         </ul>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
+                    <div className="regional-info-container">
+                        <h2>Kern County</h2>
+                        <ul className='regional-info-links'>
+                            <li> 
+                                <a href="https://discord.gg/AngWTva" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                    <i className="fa-brands fa-discord"></i> Kern County Smash Discord
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
     );
