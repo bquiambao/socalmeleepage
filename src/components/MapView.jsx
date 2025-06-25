@@ -18,7 +18,7 @@ L.Icon.Default.mergeOptions({
 function MapView({tournaments}) {
     const center = [33.6455, -117.8677];
     const swBounds = [30.5, -126];
-    const neBounds = [38, -112];
+    const neBounds = [38.5, -112];
 
     const markersRef = useRef({});
 

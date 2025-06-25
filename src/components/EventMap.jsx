@@ -24,7 +24,7 @@ function EventMap({dataType}) {
     const [selectedFrequencies, setSelectedFrequencies] = useState([]);
     const center = [33.6455, -117.8677];
     const swBounds = [30.5, -126];
-    const neBounds = [38, -112];
+    const neBounds = [38.5, -112];
 
     const markersRef = useRef({});
 
@@ -172,11 +172,29 @@ function EventMap({dataType}) {
                                 <label>
                                     <input
                                         type="checkbox"
+                                        value="Inland Empire"
+                                        checked={selectedRegions.includes("Inland Empire")}
+                                        onChange={() => handleRegionChange("Inland Empire")}
+                                    />
+                                    Inland Empire
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
                                         value="805"
                                         checked={selectedRegions.includes("805")}
                                         onChange={() => handleRegionChange("805")}
                                     />
                                     805
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        value="Kern County"
+                                        checked={selectedRegions.includes("Kern County")}
+                                        onChange={() => handleRegionChange("Kern County")}
+                                    />
+                                    Kern County
                                 </label>
                             </div>
                         </div>

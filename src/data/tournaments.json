@@ -110,5 +110,18 @@
         "lng": -120.6678204,
         "logo": "lrastart.webp",
         "note": "Usually happens the last Saturday of the month."
+    },
+    {
+        "name": "The Sauce",
+        "address": "1201 24th St D130, Bakersfield, CA 93301, USA",
+        "region": "Kern County",
+        "frequency": "Monthly",
+        "day": "Sunday",
+        "doorsOpen": "11:00 AM",
+        "startTime": "12:30 PM",
+        "lat": 35.3802307, 
+        "lng": -119.0185503,
+        "logo": "thesauce.webp",
+        "note": "Usually happens the 1st or 2nd Sunday of the month."
     }
 ]
