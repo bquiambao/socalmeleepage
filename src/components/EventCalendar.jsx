@@ -204,7 +204,15 @@ function EventCalendar({dataType}) {
 
         function handleNonCalendarEventClick(event, t) {
             setSelectedEvent(t);
-            setPopoverPosition({ top: event.pageY, left: event.pageX });
+            if (window.innerWidth < 768) {
+                setPopoverPosition({
+                    top: event.pageY,
+                    left: 10
+                });
+            }
+            else  {
+                setPopoverPosition({ top: event.pageY, left: event.pageX });
+            }
         }
 
         const handleRegionChange = (region) => {
@@ -322,7 +330,19 @@ function EventCalendar({dataType}) {
                                     zIndex: 1000,
                                 }}
                             >
-                                <button className="close-btn" onClick={() => setSelectedEvent(null)}>&times;</button>
+                                <button 
+                                    className="close-btn" 
+                                    onClick={(e) => { 
+                                        e.preventDefault(); 
+                                        const currentScroll = window.scrollY;
+                                        setSelectedEvent(null);
+                                        
+                                        requestAnimationFrame(() => {
+                                            window.scrollTo(0, currentScroll);
+                                        });
+                                    }}>
+                                    &times;
+                                </button>
                                 <h2>{selectedEvent.title}</h2>
                                 <p>Venue Address: {selectedEvent.address}</p>
                                 <p>Doors Open: {selectedEvent.doorsOpen}</p>

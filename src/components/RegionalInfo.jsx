@@ -87,6 +87,18 @@ function RegionalInfo(){
                 </SwiperSlide>
                 <SwiperSlide className="regional-swiper-slide">
                     <div className="regional-info-container">
+                        <h2>Inland Empire</h2>
+                        <ul className='regional-info-links'>
+                            <li> 
+                                <a href="https://discord.gg/AMDKnGt4EE" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                    <i className="fa-brands fa-discord"></i> San Bernardino Melee Discord
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="regional-swiper-slide">
+                    <div className="regional-info-container">
                         <h2>805 Area</h2>
                         <ul className='regional-info-links'>
                             <li> 
@@ -97,6 +109,11 @@ function RegionalInfo(){
                             <li> 
                                 <a href="https://discord.gg/gkGwa7thHK" target="_blank" rel="noopener noreferrer" className="regional-info-item">
                                     <i className="fa-brands fa-discord"></i> Ventura County Smash Discord
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://discord.gg/ygrT24d9j6" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                    <i className="fa-brands fa-discord"></i> San Luis Obispo Smash Community Discord
                                 </a>
                             </li>
                         </ul>

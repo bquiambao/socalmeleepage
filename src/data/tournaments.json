@@ -97,5 +97,18 @@
         "lng": -118.8756812,
         "logo": "smashthill.webp",
         "note": "Happens on Mondays."
+    },
+    {
+        "name": "LRA Start",
+        "address": "647 Higuera St, San Luis Obispo, CA 93401, USA",
+        "region": "805",
+        "frequency": "Monthly",
+        "day": "Saturday",
+        "doorsOpen": "2:00 PM",
+        "startTime": "2:30 PM",
+        "lat": 35.2781208, 
+        "lng": -120.6678204,
+        "logo": "lrastart.webp",
+        "note": "Usually happens the last Saturday of the month."
     }
 ]

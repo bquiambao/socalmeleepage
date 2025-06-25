@@ -28,6 +28,8 @@ function EventMap({dataType}) {
 
     const markersRef = useRef({});
 
+    const isMobile = L.Browser.mobile;
+
     if (dataType == 'upcoming') {
 
         const handleListItemClick = (locationId) => {
@@ -58,7 +60,7 @@ function EventMap({dataType}) {
                         <div className='event-map-container'>
                             <MapContainer 
                                 center={center} 
-                                zoom={8}
+                                zoom={isMobile ? 6 : 7}
                                 maxBounds={[swBounds, neBounds]} 
                                 maxBoundsViscosity={1.0} 
                                 style={{ height: '500px', width: '100%' }}
@@ -206,7 +208,7 @@ function EventMap({dataType}) {
                         <div className='event-map-container'>
                             <MapContainer 
                                 center={center} 
-                                zoom={8}  
+                                zoom={isMobile ? 6 : 7}
                                 maxBounds={[swBounds, neBounds]} 
                                 maxBoundsViscosity={1.0} 
                                 style={{ height: '500px', width: '100%' }}

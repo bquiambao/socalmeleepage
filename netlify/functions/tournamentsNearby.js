@@ -49,7 +49,7 @@ export async function handler(event, context) {
 	`;
   const variables = {
         coordinates: socalCenterCoordinates,
-        radius: "100mi",
+        radius: "200mi",
         upcoming: true,
         regOpen: true,
         publiclySearchable: true,

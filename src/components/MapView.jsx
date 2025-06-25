@@ -32,53 +32,56 @@ function MapView({tournaments}) {
     const isMobile = L.Browser.mobile;
 
     return (
-        <>
-            <MapContainer 
-                center={center} 
-                zoom={isMobile ? 7 : 8}  
-                maxBounds={[swBounds, neBounds]} 
-                maxBoundsViscosity={1.0} 
-                scrollWheelZoom={false} 
-                style={{ height: '500px', width: '100%' }}
-            >
-                <TileLayer
-                    attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {tournaments.map(t => (
-                    <Marker key={t.id} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
-                        <Popup className="tournament-map-popup">
-                            <div className="map-event-logo-section">
-                                <img src={t.images[0].url} className="map-event-logo"></img><br/>
-                            </div>
-                            <div className="map-event-info-section">
-                                <b>{t.name}</b> <br/>
-                                {t.venueAddress} <br/>
-                                Date and Time: {new Date(t.startAt * 1000).toLocaleString()}<br/>
-                                <a href={`https://start.gg/${t.url}`} target="_blank" rel="noopener noreferrer">Link to start.gg page</a> <br/>
-                                {t.streams && t.streams.length > 0 && t.streams[0].streamName && (
-                                    <a 
-                                        href={`https://twitch.tv/${t.streams[0].streamName}`} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                    >
-                                        Watch Stream
-                                    </a>
-                                )}
-                            </div> 
-                        </Popup>
-                    </Marker>
-                ))}
-            </MapContainer>
+        <div className="upcoming-event-map-wrapper">
+            <div className='upcoming-event-map-container'>
+                <MapContainer 
+                    center={center} 
+                    zoom={isMobile ? 6 : 7}  
+                    maxBounds={[swBounds, neBounds]} 
+                    maxBoundsViscosity={1.0} 
+                    scrollWheelZoom={false} 
+                    style={{ height: '500px', width: '100%' }}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    {tournaments.map(t => (
+                        <Marker key={t.id} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
+                            <Popup className="tournament-map-popup">
+                                <div className="map-event-logo-section">
+                                    <img src={t.images[0].url} className="map-event-logo"></img><br/>
+                                </div>
+                                <div className="map-event-info-section">
+                                    <b>{t.name}</b> <br/>
+                                    {t.venueAddress} <br/>
+                                    Date and Time: {new Date(t.startAt * 1000).toLocaleString()}<br/>
+                                    <a href={`https://start.gg/${t.url}`} target="_blank" rel="noopener noreferrer">Link to start.gg page</a> <br/>
+                                    {t.streams && t.streams.length > 0 && t.streams[0].streamName && (
+                                        <a 
+                                            href={`https://twitch.tv/${t.streams[0].streamName}`} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                        >
+                                            Watch Stream
+                                        </a>
+                                    )}
+                                </div> 
+                            </Popup>
+                        </Marker>
+                    ))}
+                </MapContainer>
+            </div>
 
-            {tournaments.map(t => (
-                <div key={t.id} className="tournament-list-item" onClick={() => handleListItemClick(t.id)}>
-                    <span className="tournament-date">{new Date(t.startAt * 1000).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})} </span>
-                    {t.name} - {t.venueAddress}
-                </div>
-            ))}
-            
-        </>
+            <div className="upcoming-tournament-list">
+                {tournaments.map(t => (
+                    <div key={t.id} className="upcoming-tournament-list-item" onClick={() => handleListItemClick(t.id)}>
+                        <span className="tournament-date">{new Date(t.startAt * 1000).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})} </span>
+                        {t.name} - {t.venueAddress}
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 }
 

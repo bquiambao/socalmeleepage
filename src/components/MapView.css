@@ -14,11 +14,12 @@
     font-size: medium;
 }
 
-.tournament-list-item {
+.upcoming-tournament-list-item {
     cursor: pointer;
     border: 2px solid black;
     width: 100%;
     padding: 10px;
+    padding-left: none;
     margin-bottom: 5px;
     color: black;
     font-family: 'Franklin Gothic Medium', sans-serif;
@@ -42,7 +43,25 @@
     position: relative;
 }
 
+.upcoming-event-map-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcoming-event-map-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
 @media (max-width: 768px) {
+
+    .upcoming-event-map-container {
+        width: 90vw;
+        padding-bottom: 10px;
+    }
 
     .tournament-map-popup {
         max-width: 75vw;
