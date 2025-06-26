@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 300px;
+    top: clamp(200px, 35vh, 300px);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -226,6 +226,16 @@
 }
 
 @media (max-width: 768px) {
+
+    .button-social-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     .hero-image {
         object-fit: cover;
