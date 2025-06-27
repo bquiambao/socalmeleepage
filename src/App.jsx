@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Events from './components/pages/Events';
 import About from './components/pages/About';
 import Archive from './components/pages/Archive';
+import Replays from './components/pages/Replays';
 import { UpcomingTournamentDataProvider } from './context/UpcomingTournamentDataContext';
 import { LastNightsTournamentResultsProvider } from './context/LastNightsTournamentResultsContext';
 import 'leaflet/dist/leaflet.css';
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/events' element={<Events/>} />
                 <Route path='/about' element={<About/>} />
                 <Route path='/archive' element={<Archive/>} />
+                <Route path='/replays' element={<Replays/>} />
               </Routes>
             </AnimatePresence>
           </Router>
