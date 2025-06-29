@@ -68,6 +68,24 @@ const galleries = {
                 src: "/images/localreport1/page5.jpg" 
             },
         ]
+    },
+    localReport2: {
+        label: "Local Report #2 by Josh Kano",
+        thumb: "/images/localreport2/page1.jpg",
+        images: [
+            { 
+                src: "/images/localreport2/page1.jpg" 
+            },
+            { 
+                src: "/images/localreport2/page2.jpg" 
+            },
+            { 
+                src: "/images/localreport2/page3.jpg" 
+            },
+            { 
+                src: "/images/localreport2/page4.jpg" 
+            }
+        ]
     }
 }
 
