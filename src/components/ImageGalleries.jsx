@@ -7,8 +7,13 @@ import {AnimatePresence, motion} from 'framer-motion';
 const galleries = {
     rankings: {
         label: "Rankings",
-        thumb: "/images/rankings/SummerWinter2024Rankings.png",
+        thumb: "/images/rankings/WinterSpring2025Rankings.png",
         images: [
+            { 
+                src: "/images/rankings/WinterSpring2025Rankings.png",
+                caption: "SoCal Winter-Spring 2025 Power Rankings",
+                credit: "@shrugclub" 
+            },
             { 
                 src: "/images/rankings/SummerWinter2024Rankings.png",
                 caption: "SoCal Summer-Winter 2024 Power Rankings",
