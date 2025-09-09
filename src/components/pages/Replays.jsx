@@ -56,6 +56,11 @@ function Replays(){
                                     (Includes Melee Friends Activate!)
                                 </a>
                             </li>
+                            <li> 
+                                <a href="https://www.youtube.com/@IEMelee" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    Inland Empire Melee VODs 
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
