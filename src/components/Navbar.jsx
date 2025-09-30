@@ -28,6 +28,9 @@ function Navbar() {
                         <Link to="/replays" className="nav-links" onClick={closeMobileMenu}><span className="nav-link-text">Replays</span></Link>
                     </li>
                     <li className='nav-item'>
+                        <Link to="/sclleaderboard" className="nav-links" onClick={closeMobileMenu}><span className="nav-link-text">SCL Standings</span></Link>
+                    </li>
+                    <li className='nav-item'>
                         <Link to="/archive" className="nav-links" onClick={closeMobileMenu}><span className="nav-link-text">Content Archive</span></Link>
                     </li>
                 </ul>

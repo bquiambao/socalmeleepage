@@ -1,0 +1,25 @@
+.scl-section {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.leaderboard-section {
+    margin: 20px;
+}
+
+.standing {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+
+    .standing {
+        font-size: 1.25rem;
+    }
+
+}
