@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './SCLLeaderboard.css';
+import Papa from 'papaparse';
 
 function SCLLeaderboard(){
     const [data, setData] = useState([]);
@@ -15,26 +16,22 @@ function SCLLeaderboard(){
         fetch(SHEET_URL)
             .then(res => res.text())
             .then(csv => {
-                const lines = csv.split('\n').filter(line => line.trim());
-                const headers = lines[0].split(',');
-                
-                // Find column indices
-                const indices = COLUMNS.map(col => 
-                headers.findIndex(h => h.trim() === col)
-                );
-                
-                // Extract only needed columns
-                const rows = lines.slice(1).map(line => {
-                const values = line.split(',');
-                return {
-                    [COLUMNS[0]]: values[indices[0]]?.trim() || '',
-                    [COLUMNS[1]]: values[indices[1]]?.trim() || ''
-                };
-                })
-                .filter(row => row[COLUMNS[0]] && row[COLUMNS[1]]);
-                
-                setData(rows);
-                setLoading(false);
+                Papa.parse(csv, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (results) => {
+                        // Extract only the columns you need
+                        const filtered = results.data
+                        .map(row => ({
+                            [COLUMNS[0]]: row[COLUMNS[0]] || '',
+                            [COLUMNS[1]]: row[COLUMNS[1]] || ''
+                        }))
+                        .filter(row => row[COLUMNS[0]] || row[COLUMNS[1]]);
+                        
+                        setData(filtered);
+                        setLoading(false);
+                    }
+                    });
             });
     }, []);
 
@@ -58,14 +55,17 @@ function SCLLeaderboard(){
                 <h2>Contact self_flagellate on Discord if you have any questions or concerns about points or the current state of the leaderboard.</h2>
                 <div className="leaderboard-section">
                     <h1>SCL Point Standings</h1>
-                    {data.map((row, i) => (
-                        <div className="standing" key={i}>
-                            <span>{i + 1}. </span>
-                            <span>{row[COLUMNS[0]]}</span>
-                            <span> - </span>
-                            <span>{row[COLUMNS[1]]}</span>
-                        </div>
-                    ))}
+                    <table>
+                        <tbody>
+                            {data.map((row, i) => (
+                                <tr key={i}>
+                                    <td className="standing">{i + 1} </td>
+                                    <td className="standing">{row[COLUMNS[0]]}</td>
+                                    <td className="standing">{row[COLUMNS[1]]}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </motion.div>
