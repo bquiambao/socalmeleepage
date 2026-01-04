@@ -31,6 +31,21 @@ function Replays(){
                                     (Includes Rage Against the CRT and Mission Complete)
                                 </a>
                             </li>
+                            <li> 
+                                <a href="https://drive.google.com/drive/folders/1km-j2dAi1NwQn9m_Icm_rz745IrXWP-9?usp=drive_link" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    UCI Replays
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://drive.google.com/drive/folders/1XHLwC8jJLCuYc8RVRoacoJk1gAhtVixc?usp=drive_link" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    MFA Replays
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://drive.google.com/drive/folders/1xb35LPOhK2ZsUq2f9dLoOlFhNzsdDXGG?usp=drive_link" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    Lab Monster Replays
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -59,6 +74,11 @@ function Replays(){
                             <li> 
                                 <a href="https://www.youtube.com/@IEMelee" target="_blank" rel="noopener noreferrer" className="replays-link"> 
                                     Inland Empire Melee VODs 
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="https://www.youtube.com/@labmonstervods" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    Lab Monster VODs 
                                 </a>
                             </li>
                         </ul>
