@@ -32,13 +32,9 @@ function Replays(){
                                 </a>
                             </li>
                             <li> 
-                                <a href="https://drive.google.com/drive/folders/1km-j2dAi1NwQn9m_Icm_rz745IrXWP-9?usp=drive_link" target="_blank" rel="noopener noreferrer" className="replays-link"> 
-                                    UCI Replays
-                                </a>
-                            </li>
-                            <li> 
-                                <a href="https://drive.google.com/drive/folders/1XHLwC8jJLCuYc8RVRoacoJk1gAhtVixc?usp=drive_link" target="_blank" rel="noopener noreferrer" className="replays-link"> 
-                                    MFA Replays
+                                <a href="https://drive.google.com/drive/folders/1TXc-NKTrWc_8kOFr3lUkylmn5zcRgqdO?usp=sharing" target="_blank" rel="noopener noreferrer" className="replays-link"> 
+                                    Orange County Events Slippi Replays <br/>
+                                    (Includes UCI Weeklies and Melee Friends Activate!)
                                 </a>
                             </li>
                             <li> 
