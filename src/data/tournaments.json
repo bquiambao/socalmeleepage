@@ -123,5 +123,17 @@
         "lng": -119.0185503,
         "logo": "thesauce.webp",
         "note": "Usually happens the 1st or 2nd Sunday of the month."
+    },
+    {
+        "name": "Sasa's Shine Dash",
+        "address": "3555 1st St, Los Angeles, CA 90063, USA",
+        "region": "Los Angeles",
+        "frequency": "Weekly",
+        "day": "Wednesday",
+        "doorsOpen": "6:00 PM",
+        "startTime": "7:00 PM",
+        "lat": 34.0361997, 
+        "lng": -118.1931933,
+        "logo": "sasas.png"
     }
 ]
