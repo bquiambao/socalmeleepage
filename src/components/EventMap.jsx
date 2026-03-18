@@ -72,9 +72,11 @@ function EventMap({dataType}) {
                                 {tournaments.map(t => (
                                     <Marker key={t.id} position={[t.lat, t.lng]} ref={el => markersRef.current[t.id] = el}>
                                         <Popup className="tournament-map-popup">
-                                            <div className="map-event-logo-section">
-                                                <img src={t.images[0].url} className="map-event-logo"></img><br/>
-                                            </div>
+                                            {t.images[0] && (
+                                                <div className="map-event-logo-section">
+                                                    <img src={t.images[0].url} className="map-event-logo"></img><br/>
+                                                </div>
+                                            )}
                                             <div className="map-event-info-section">
                                                 <b>{t.name}</b> <br/>
                                                 {t.venueAddress} <br/>
