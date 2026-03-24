@@ -24,7 +24,7 @@ function RegionalInfo(){
                         <h2>Los Angeles</h2>
                         <ul className='regional-info-links'>
                             <li> 
-                                <a href="https://discord.gg/5A9z8feZDW" target="_blank" rel="noopener noreferrer" className="regional-info-item">
+                                <a href="https://discord.gg/tHY7Na6Uqp" target="_blank" rel="noopener noreferrer" className="regional-info-item">
                                     <i className="fa-brands fa-discord"></i> The Pipeline (Very Local Melee Event Server)
                                 </a>
                             </li>
