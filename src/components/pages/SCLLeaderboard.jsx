@@ -7,7 +7,7 @@ function SCLLeaderboard(){
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRan4R2AuqG2B7yuMBL8qyFv4DN1DpQYQJ1N-jEzlX89DN9u0e0SIBfPCOq5s0HyognkXC0BDVGLrQa/pub?gid=488929005&single=true&output=csv';
+    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRan4R2AuqG2B7yuMBL8qyFv4DN1DpQYQJ1N-jEzlX89DN9u0e0SIBfPCOq5s0HyognkXC0BDVGLrQa/pub?gid=2145205108&single=true&output=csv';
   
     // Player and point names
     const COLUMNS = ['Player', 'Pts'];
@@ -50,7 +50,7 @@ function SCLLeaderboard(){
         >
             <div className="scl-section">
                 <h1>Salami Chud League (SCL) is a high-level invitational tournament in SoCal that uses a points sytem where players can earn points by performing well at locals and qualify into the event.</h1>
-                <h2><a href="https://docs.google.com/spreadsheets/d/1QX5Ak7hLrAkhEWkrwxRlpiMOowXnXLz-Ln_OyUlByFk/edit?gid=488929005#gid=488929005">More info here</a></h2>
+                <h2><a href="https://docs.google.com/spreadsheets/d/1QX5Ak7hLrAkhEWkrwxRlpiMOowXnXLz-Ln_OyUlByFk/edit?gid=2145205108#gid=2145205108">More info here</a></h2>
                 <br/>
                 <h2>Contact self_flagellate on Discord if you have any questions or concerns about points or the current state of the leaderboard.</h2>
                 <div className="leaderboard-section">
